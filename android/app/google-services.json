@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "292274643794",
+    "project_id": "firstpro-9be25",
+    "storage_bucket": "firstpro-9be25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292274643794:android:b054c15170d1f1b6a8908b",
+        "android_client_info": {
+          "package_name": "com.example.firee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292274643794-70bs3f8h1dn1v0so6b91fomke5qj4rb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUDsED25h4wyjsVR4cyqEBpb1swG8wXTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292274643794-70bs3f8h1dn1v0so6b91fomke5qj4rb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292274643794:android:0da2c22fa3d08228a8908b",
+        "android_client_info": {
+          "package_name": "com.example.tadoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292274643794-70bs3f8h1dn1v0so6b91fomke5qj4rb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUDsED25h4wyjsVR4cyqEBpb1swG8wXTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292274643794-70bs3f8h1dn1v0so6b91fomke5qj4rb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
