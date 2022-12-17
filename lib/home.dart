@@ -19,6 +19,7 @@ import 'package:tadoo/views/login.dart';
 
 class HomeWid extends StatefulWidget {
   HomeWid({super.key});
+  static String id = 'homescreen';
 
   @override
   State<HomeWid> createState() => _HomeWidState();
@@ -282,7 +283,7 @@ class _HomeWidState extends State<HomeWid> {
                                                         255, 202, 179, 171))
                                               ],
                                               color: Color.fromARGB(
-                                                  255, 255, 185, 185),
+                                                  255, 255, 239, 239),
                                               borderRadius:
                                                   BorderRadius.circular(30)),
                                           child: Center(
@@ -401,7 +402,7 @@ class _HomeWidState extends State<HomeWid> {
                                                 blurRadius: 7),
                                           ],
                                           color: Color.fromARGB(
-                                              255, 252, 207, 207),
+                                              255, 244, 244, 244),
                                           borderRadius:
                                               BorderRadius.circular(25)),
                                       child: Padding(
@@ -422,6 +423,9 @@ class _HomeWidState extends State<HomeWid> {
                                                           FontWeight.w600),
                                                 ),
                                               ],
+                                            ),
+                                            SizedBox(
+                                              height: 5,
                                             ),
                                             Row(
                                               children: [

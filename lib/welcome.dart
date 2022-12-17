@@ -12,7 +12,7 @@ import 'package:tadoo/views/login.dart';
 
 class WelcmPg extends StatefulWidget {
   const WelcmPg({super.key});
-
+  static String id = 'welcomepage';
   @override
   State<WelcmPg> createState() => _WelcmPgState();
 }

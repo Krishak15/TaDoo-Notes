@@ -65,7 +65,7 @@ class _EditnoteState extends State<Editnote> {
             height: 45,
           ),
           Text(
-            "Add Task",
+            "Edit Note",
             style: GoogleFonts.outfit(
                 fontWeight: FontWeight.w600,
                 fontSize: 35,

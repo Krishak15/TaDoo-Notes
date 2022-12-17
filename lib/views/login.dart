@@ -146,14 +146,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   .showSnackBar(snack3);
                             });
                           } on Exception catch (e) {
-                            print(".............${e}");
-
                             String err = e.toString();
 
                             final containsDnull =
                                 err.contains('Given String is empty or null');
-
-                            print("======================${containsDnull}");
 
                             final containsd =
                                 err.contains("email-already-in-use");

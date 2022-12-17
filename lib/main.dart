@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,23 +17,44 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late StreamSubscription<User?> user;
+  void initState() {
+    super.initState();
+    user = FirebaseAuth.instance.authStateChanges().listen((user) {
+      if (user == null) {
+        print('User is currently signed out!');
+      } else {
+        print('User is signed in!');
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    user.cancel();
+    super.dispose();
+  }
+
+  // ---------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent
-            //color set to transperent or set your own color
-            ));
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
-      builder: (context, widget) => ResponsiveWrapper.builder(
-          ClampingScrollWrapper.builder(context, widget!),
-          breakpoints: const [
-            ResponsiveBreakpoint.resize(350, name: MOBILE),
-            ResponsiveBreakpoint.resize(500, name: MOBILE),
-          ]),
+      initialRoute:
+          FirebaseAuth.instance.currentUser == null ? WelcmPg.id : HomeWid.id,
+      routes: {
+        WelcmPg.id: (context) => WelcmPg(),
+        HomeWid.id: (context) => HomeWid()
+      },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
